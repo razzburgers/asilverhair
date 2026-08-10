@@ -1,0 +1,1 @@
+const q=document.querySelector('#archiveSearch');if(q){const cards=[...document.querySelectorAll('.entry-card')],empty=document.querySelector('#noResults');q.addEventListener('input',()=>{const s=q.value.trim().toLowerCase();let shown=0;cards.forEach(c=>{const ok=!s||c.dataset.search.includes(s);c.hidden=!ok;if(ok)shown++});if(empty)empty.hidden=shown!==0})}

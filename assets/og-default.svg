@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#0c0d10"/>
+<circle cx="1030" cy="120" r="260" fill="#161820"/>
+<path d="M900 330c80-10 140-45 185-105 34-46 52-105 125-135-37 38-51 84-60 128-18 102-83 166-195 194 72-35 118-81 145-139-63 62-130 95-200 105z" fill="#d9dbe3" opacity=".9"/>
+<text x="90" y="210" fill="#9b96a3" font-family="Arial, sans-serif" font-size="26" letter-spacing="6">VIVIENNE</text>
+<text x="90" y="320" fill="#eeeaf1" font-family="Georgia, serif" font-size="72">A Silver Hair</text>
+<text x="90" y="400" fill="#eeeaf1" font-family="Georgia, serif" font-size="72">of Wisdom</text>
+<text x="90" y="475" fill="#c8c1cc" font-family="Georgia, serif" font-size="30" font-style="italic">Advice from Vivienne</text>
+</svg>
