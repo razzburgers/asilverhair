@@ -12,7 +12,11 @@
       "You already know what happens when you reach for them.",
       "Find out what happens when you do not."
     ],
-    "topic": "relationships"
+    "topic": "relationships",
+    "publish_date": "2026-08-01",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for Collect the Other Half of the Information"
   },
   {
     "number": 2,
@@ -27,7 +31,11 @@
       "You can understand what happened without receiving their confession.",
       "You can close a door without their agreement that it should be closed."
     ],
-    "topic": "regret"
+    "topic": "regret",
+    "publish_date": "2026-08-02",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for The Apology You Keep Waiting For"
   },
   {
     "number": 3,
@@ -41,7 +49,11 @@
       "One of the clearest signs of confidence is the ability to let someone misunderstand you without immediately beginning a campaign to correct them.",
       "Not every opinion deserves access to your nervous system."
     ],
-    "topic": "confidence"
+    "topic": "confidence",
+    "publish_date": "2026-08-03",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for Confidence Is Not Volume"
   },
   {
     "number": 4,
@@ -55,7 +67,11 @@
       "But the moment you secretly change the conditions, you are no longer observing the relationship. You are running an experiment on it.",
       "Ask the uncomfortable question instead. The answer may hurt, but at least it will belong to the real relationship."
     ],
-    "topic": "relationships"
+    "topic": "relationships",
+    "publish_date": "2026-08-04",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for Stop Testing People"
   },
   {
     "number": 5,
@@ -70,7 +86,11 @@
       "People often stay too long because they think leaving requires a courtroom argument. It does not.",
       "You are allowed to leave a situation because the version of you that survives there is not the version of you you want to keep becoming."
     ],
-    "topic": "starting-over"
+    "topic": "starting-over",
+    "publish_date": "2026-08-05",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for Knowing When to Leave"
   },
   {
     "number": 6,
@@ -84,7 +104,11 @@
       "The next time they call, you do not need to punish them. Just stop automatically volunteering more than they asked for.",
       "Give the relationship enough room to reveal whether there is anything in it besides rescue."
     ],
-    "topic": "friendship"
+    "topic": "friendship",
+    "publish_date": "2026-08-06",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for The Friend Who Only Calls When They Need Something"
   },
   {
     "number": 7,
@@ -99,7 +123,11 @@
       "You have already learned which doors are painted on walls, which promises expire, and which compromises become permanent if you keep renewing them.",
       "Use the knowledge. Do not use it as an excuse to stay somewhere you have already outgrown."
     ],
-    "topic": "starting-over"
+    "topic": "starting-over",
+    "publish_date": "2026-08-07",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for Starting Over at Forty"
   },
   {
     "number": 8,
@@ -113,7 +141,11 @@
       "Before you accuse them, ask plainly. Before you beg them, listen carefully.",
       "The answer is not only in what they say. It is in whether they seem relieved to finally discuss it, or annoyed that you noticed."
     ],
-    "topic": "relationships"
+    "topic": "relationships",
+    "publish_date": "2026-08-08",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for When Someone Stops Trying"
   },
   {
     "number": 9,
@@ -128,7 +160,11 @@
       "But being wanted has weight. It costs someone time, effort, inconvenience, and occasionally pride.",
       "Do not measure affection only by how often someone returns. Pay attention to what they are willing to rearrange."
     ],
-    "topic": "dating"
+    "topic": "dating",
+    "publish_date": "2026-08-09",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for Being Wanted vs. Being Convenient"
   },
   {
     "number": 10,
@@ -143,7 +179,11 @@
       "Then ask yourself one question: if there were no reply at all, would I still be glad I sent this?",
       "If the answer is yes, send it. If the answer is no, you were probably asking the message to do a job it cannot do."
     ],
-    "topic": "relationships"
+    "topic": "relationships",
+    "publish_date": "2026-08-10",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for The Text You Shouldn’t Send"
   },
   {
     "number": 11,
@@ -160,7 +200,11 @@
       "Decide what is actually yours to carry into the conversation: what happened, how it affected you, what you need now, and what you will do if that need cannot be met.",
       "Leave the rest of the dialogue unwritten.",
       "You do not need the perfect conversation. You need enough honesty to survive an imperfect one."
-    ]
+    ],
+    "publish_date": "2026-08-11",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for The Conversation You Keep Rehearsing"
   },
   {
     "number": 12,
@@ -177,7 +221,11 @@
       "Compatibility is less cinematic. It appears in calendars, apologies, patience, and the willingness to be understandable.",
       "If the relationship only feels extraordinary when nothing difficult is being asked of it, chemistry may be carrying more than its share.",
       "Attraction is a beginning. Let behavior write the rest."
-    ]
+    ],
+    "publish_date": "2026-08-12",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for When Chemistry Is Doing All the Work"
   },
   {
     "number": 13,
@@ -194,11 +242,15 @@
       "The distinction is not whether information is withheld. The distinction is what the withholding protects.",
       "Privacy protects dignity, timing, safety, or independence. Secrecy often protects behavior that would become harder to continue if it were known.",
       "You do not need access to every locked drawer in another person's life. But if you are repeatedly asked to ignore the sound coming from behind one of them, pay attention."
-    ]
+    ],
+    "publish_date": "2026-08-13",
+    "status": "published",
+    "image": "",
+    "image_alt": "Editorial cover for The Difference Between Privacy and Secrecy"
   },
   {
     "number": 14,
-    "date": "2026-08-14",
+    "date": "2026-08-15",
     "slug": "you-do-not-have-to-win-the-breakup",
     "title": "You Do Not Have to Win the Breakup",
     "dek": "Leaving with dignity is more useful than leaving with the final word.",
@@ -212,11 +264,15 @@
       "Then resist the urge to keep litigating after the relationship has already delivered its verdict.",
       "You do not need them to agree with your account in order to learn from it.",
       "The most useful thing to take from an ending is not victory. It is information you can carry into the next beginning."
-    ]
+    ],
+    "publish_date": "2026-08-15",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for You Do Not Have to Win the Breakup"
   },
   {
     "number": 15,
-    "date": "2026-08-15",
+    "date": "2026-08-17",
     "slug": "the-compliment-you-cannot-accept",
     "title": "The Compliment You Cannot Accept",
     "dek": "Sometimes the kindest response to praise is simply to stop arguing with it.",
@@ -231,11 +287,15 @@
       "No disclaimer. No joke at your own expense. No immediate return compliment required to balance the books.",
       "You do not have to believe every flattering thing anyone says. But you might allow the possibility that people occasionally see something in you that you have become too accustomed to notice.",
       "Let a good word land before you decide it must be wrong."
-    ]
+    ],
+    "publish_date": "2026-08-17",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Compliment You Cannot Accept"
   },
   {
     "number": 16,
-    "date": "2026-08-16",
+    "date": "2026-08-19",
     "slug": "when-an-old-friend-becomes-a-stranger",
     "title": "When an Old Friend Becomes a Stranger",
     "dek": "History can explain a friendship without obligating its future.",
@@ -249,11 +309,15 @@
       "If it does, the friendship may only have been neglected.",
       "If it does not, you are allowed to appreciate what the relationship was without forcing it to impersonate what it used to be.",
       "Some people belong permanently in your history without needing permanent access to your calendar."
-    ]
+    ],
+    "publish_date": "2026-08-19",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for When an Old Friend Becomes a Stranger"
   },
   {
     "number": 17,
-    "date": "2026-08-17",
+    "date": "2026-08-22",
     "slug": "stop-explaining-the-boundary",
     "title": "Stop Explaining the Boundary",
     "dek": "A boundary that requires unanimous approval is only a suggestion.",
@@ -267,11 +331,15 @@
       "Listen if new information matters. Correct yourself when you genuinely should.",
       "But do not confuse someone's persistence with evidence that your boundary has become invalid.",
       "A complete sentence does not become incomplete merely because another person wanted a different ending."
-    ]
+    ],
+    "publish_date": "2026-08-22",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for Stop Explaining the Boundary"
   },
   {
     "number": 18,
-    "date": "2026-08-18",
+    "date": "2026-08-24",
     "slug": "the-life-you-thought-you-would-have",
     "title": "The Life You Thought You Would Have",
     "dek": "Grief is not reserved for things that actually happened.",
@@ -286,11 +354,15 @@
       "Grieve specifically. Name what you wanted. Name what you miss.",
       "Then look around for what is still unfinished.",
       "Sometimes starting over begins when you stop asking the present to apologize for not becoming the future you once predicted."
-    ]
+    ],
+    "publish_date": "2026-08-24",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Life You Thought You Would Have"
   },
   {
     "number": 19,
-    "date": "2026-08-19",
+    "date": "2026-08-26",
     "slug": "being-easygoing-has-a-price",
     "title": "Being Easygoing Has a Price",
     "dek": "Peacekeeping becomes expensive when you are always the one paying for it.",
@@ -304,11 +376,15 @@
       "Choose the restaurant. Say that Tuesday does not work. Admit that the joke bothered you. Ask for the seat you actually want.",
       "The goal is not to become difficult. It is to stop making your own absence the price of being considered pleasant.",
       "Relationships that can only remain peaceful when you require nothing are not especially peaceful. They are simply quiet."
-    ]
+    ],
+    "publish_date": "2026-08-26",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for Being Easygoing Has a Price"
   },
   {
     "number": 20,
-    "date": "2026-08-20",
+    "date": "2026-08-29",
     "slug": "you-are-allowed-to-change-your-mind",
     "title": "You Are Allowed to Change Your Mind",
     "dek": "Consistency is not a virtue when it requires loyalty to an outdated decision.",
@@ -323,11 +399,15 @@
       "Of course, other people are allowed to be affected by your change. Commitments have consequences. Handle those honestly.",
       "But do not remain in a life merely because you once gave an excellent speech about why you chose it.",
       "Past-you was allowed to decide. Present-you is allowed to review the decision."
-    ]
+    ],
+    "publish_date": "2026-08-29",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for You Are Allowed to Change Your Mind"
   },
   {
     "number": 21,
-    "date": "2026-08-21",
+    "date": "2026-08-31",
     "slug": "when-they-say-they-are-not-ready",
     "title": "When They Say They Are Not Ready",
     "dek": "Believe the limitation without turning it into a challenge.",
@@ -342,11 +422,15 @@
       "Take people seriously when they tell you what they cannot offer. You do not need to punish them or diagnose them.",
       "You only need to decide whether what is available is enough for you now.",
       "Potential is a lovely place to visit. Be cautious about moving there."
-    ]
+    ],
+    "publish_date": "2026-08-31",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for When They Say They Are Not Ready"
   },
   {
     "number": 22,
-    "date": "2026-08-22",
+    "date": "2026-09-02",
     "slug": "the-courage-to-be-disliked",
     "title": "The Courage to Be Disliked",
     "dek": "Being understood by everyone is an impossible retirement plan.",
@@ -361,11 +445,15 @@
       "Do your best to be fair. Repair what you genuinely damage. Remain curious about criticism.",
       "Then allow other adults to have opinions you do not manage.",
       "Freedom sometimes arrives disguised as somebody not liking you anymore."
-    ]
+    ],
+    "publish_date": "2026-09-02",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Courage to Be Disliked"
   },
   {
     "number": 23,
-    "date": "2026-08-23",
+    "date": "2026-09-05",
     "slug": "do-not-confuse-familiar-with-safe",
     "title": "Do Not Confuse Familiar With Safe",
     "dek": "We often recognize old patterns before we recognize good ones.",
@@ -380,11 +468,15 @@
       "Does this feel good because it is good for me, or because I already know my role?",
       "Safety may be less intoxicating at first because it does not activate all the skills you developed for surviving uncertainty.",
       "Give yourself time to learn a new kind of familiar."
-    ]
+    ],
+    "publish_date": "2026-09-05",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for Do Not Confuse Familiar With Safe"
   },
   {
     "number": 24,
-    "date": "2026-08-24",
+    "date": "2026-09-07",
     "slug": "the-day-after-you-embarrass-yourself",
     "title": "The Day After You Embarrass Yourself",
     "dek": "Most people are thinking about themselves far more than they are thinking about your worst moment.",
@@ -400,11 +492,15 @@
       "Confidence is not never looking foolish. It is learning that foolishness is survivable.",
       "Tomorrow, walk back into the room as though you are still allowed to be there.",
       "You are."
-    ]
+    ],
+    "publish_date": "2026-09-07",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Day After You Embarrass Yourself"
   },
   {
     "number": 25,
-    "date": "2026-08-25",
+    "date": "2026-09-09",
     "slug": "when-your-children-no-longer-need-you-the-same-way",
     "title": "When Your Children No Longer Need You the Same Way",
     "dek": "A changing role is not the same thing as becoming irrelevant.",
@@ -419,11 +515,15 @@
       "Let the relationship become more voluntary. Ask instead of instructing. Become curious about the adult standing where your child used to be.",
       "And recover pieces of yourself that may have spent years waiting politely in another room.",
       "Being needed is one form of love. Being chosen when you are no longer necessary is another."
-    ]
+    ],
+    "publish_date": "2026-09-09",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for When Your Children No Longer Need You the Same Way"
   },
   {
     "number": 26,
-    "date": "2026-08-26",
+    "date": "2026-09-12",
     "slug": "you-cannot-make-someone-miss-you-correctly",
     "title": "You Cannot Make Someone Miss You Correctly",
     "dek": "Absence is not a remote control.",
@@ -438,11 +538,15 @@
       "None of those outcomes can be controlled by perfect silence.",
       "Leave when leaving is right. Stay away when staying away is healthy.",
       "Let absence belong to you before you ask it to teach someone else a lesson."
-    ]
+    ],
+    "publish_date": "2026-09-12",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for You Cannot Make Someone Miss You Correctly"
   },
   {
     "number": 27,
-    "date": "2026-08-27",
+    "date": "2026-09-14",
     "slug": "stop-auditioning-for-people-who-already-know-you",
     "title": "Stop Auditioning for People Who Already Know You",
     "dek": "Repeatedly proving your value is not the same thing as being valued.",
@@ -457,11 +561,15 @@
       "But you are also entitled to notice when a relationship requires you to continuously demonstrate why you deserve a place in it.",
       "The right people may still need communication and effort.",
       "They should not need a quarterly presentation on your worth."
-    ]
+    ],
+    "publish_date": "2026-09-14",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for Stop Auditioning for People Who Already Know You"
   },
   {
     "number": 28,
-    "date": "2026-08-28",
+    "date": "2026-09-16",
     "slug": "the-friendship-that-survives-a-no",
     "title": "The Friendship That Survives a No",
     "dek": "A useful test of closeness is whether disappointment can exist without punishment.",
@@ -477,11 +585,15 @@
       "Friendship should be able to update its understanding of who you are.",
       "A yes means more when no remains a legitimate answer.",
       "If closeness depends upon constant compliance, what you have may be useful to someone, but usefulness and friendship are not synonyms."
-    ]
+    ],
+    "publish_date": "2026-09-16",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Friendship That Survives a No"
   },
   {
     "number": 29,
-    "date": "2026-08-29",
+    "date": "2026-09-19",
     "slug": "when-you-miss-who-you-were",
     "title": "When You Miss Who You Were",
     "dek": "Nostalgia edits with a very flattering hand.",
@@ -496,11 +608,15 @@
       "You have capacities now that youth could not have given you: pattern recognition, proportion, a better sense of what deserves panic, and—if you have been paying attention—a shorter list of people you need to impress.",
       "Miss what was beautiful.",
       "Then notice what only became possible because you kept going."
-    ]
+    ],
+    "publish_date": "2026-09-19",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for When You Miss Who You Were"
   },
   {
     "number": 30,
-    "date": "2026-08-30",
+    "date": "2026-09-21",
     "slug": "the-person-who-keeps-you-almost-chosen",
     "title": "The Person Who Keeps You Almost Chosen",
     "dek": "Almost can consume more time than no.",
@@ -516,11 +632,15 @@
       "Do not demand milestones simply because a calendar says you should. People move at different speeds.",
       "But time should reveal something. Clarity should increase. Mutual investment should become easier to identify, not require increasingly creative interpretation.",
       "You are allowed to stop dating the forecast and look at the weather."
-    ]
+    ],
+    "publish_date": "2026-09-21",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Person Who Keeps You Almost Chosen"
   },
   {
     "number": 31,
-    "date": "2026-08-31",
+    "date": "2026-09-23",
     "slug": "your-life-does-not-need-a-witness-to-count",
     "title": "Your Life Does Not Need a Witness to Count",
     "dek": "Not every beautiful thing needs to become proof that you are living well.",
@@ -535,11 +655,15 @@
       "A private pleasure develops a different kind of weight.",
       "It reminds you that experience does not require applause to become real.",
       "Some of the best parts of a life can belong entirely to the person who lived them."
-    ]
+    ],
+    "publish_date": "2026-09-23",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for Your Life Does Not Need a Witness to Count"
   },
   {
     "number": 32,
-    "date": "2026-09-01",
+    "date": "2026-09-26",
     "slug": "the-problem-with-being-the-strong-one",
     "title": "The Problem With Being the Strong One",
     "dek": "Competence can become camouflage.",
@@ -553,11 +677,15 @@
       "Ask earlier. Be specific. Let someone bring dinner before you are too exhausted to eat it. Say that you are frightened without immediately explaining why everything will probably be fine.",
       "Vulnerability does not cancel competence.",
       "It gives the people who love you a chance to participate in your life as something other than spectators admiring how well you carry it."
-    ]
+    ],
+    "publish_date": "2026-09-26",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Problem With Being the Strong One"
   },
   {
     "number": 33,
-    "date": "2026-09-02",
+    "date": "2026-09-28",
     "slug": "when-work-stops-loving-you-back",
     "title": "When Work Stops Loving You Back",
     "dek": "A job can matter deeply without being allowed to define your entire worth.",
@@ -571,11 +699,15 @@
       "Not only salary. Does it still teach you? Respect you? Leave enough of you intact for the people and interests that cannot put themselves on your calendar?",
       "You do not have to hate a job before changing your relationship with it.",
       "Sometimes the healthiest career decision is simply refusing to let work consume the person whose name appears on the résumé."
-    ]
+    ],
+    "publish_date": "2026-09-28",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for When Work Stops Loving You Back"
   },
   {
     "number": 34,
-    "date": "2026-09-03",
+    "date": "2026-09-30",
     "slug": "you-do-not-need-to-forgive-on-schedule",
     "title": "You Do Not Need to Forgive on Schedule",
     "dek": "Healing is not improved by pretending to have arrived early.",
@@ -591,11 +723,15 @@
       "Move honestly.",
       "Forgive if forgiveness becomes real.",
       "Until then, aim for freedom. It is a worthwhile destination even when you use a different road."
-    ]
+    ],
+    "publish_date": "2026-09-30",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for You Do Not Need to Forgive on Schedule"
   },
   {
     "number": 35,
-    "date": "2026-09-04",
+    "date": "2026-10-03",
     "slug": "the-empty-chair-at-the-table",
     "title": "The Empty Chair at the Table",
     "dek": "Loneliness is not proof that you made the wrong decision.",
@@ -610,11 +746,15 @@
       "Fill some of it deliberately: a new routine, an old friend, a class, a Saturday morning that no longer belongs to someone else's habits.",
       "And leave some of it empty long enough to discover what you actually want there.",
       "Do not invite the wrong thing back merely because the room echoes."
-    ]
+    ],
+    "publish_date": "2026-10-03",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Empty Chair at the Table"
   },
   {
     "number": 36,
-    "date": "2026-09-05",
+    "date": "2026-10-05",
     "slug": "when-someone-gives-you-a-backhanded-compliment",
     "title": "When Someone Gives You a Backhanded Compliment",
     "dek": "You are not required to unwrap every insult just because it arrived with a bow.",
@@ -629,11 +769,15 @@
       "The important part is not finding the perfect comeback.",
       "It is trusting the part of you that noticed the sting.",
       "Politeness does not require pretending a barb became harmless because someone attached praise to the front of it."
-    ]
+    ],
+    "publish_date": "2026-10-05",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for When Someone Gives You a Backhanded Compliment"
   },
   {
     "number": 37,
-    "date": "2026-09-06",
+    "date": "2026-10-07",
     "slug": "the-second-first-date",
     "title": "The Second First Date",
     "dek": "Starting again is not starting from nothing.",
@@ -648,11 +792,15 @@
       "Let yourself be awkward.",
       "The point of a first date is not to prove that you still know how to date.",
       "It is simply to discover whether you would enjoy a second conversation with the person across from you."
-    ]
+    ],
+    "publish_date": "2026-10-07",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Second First Date"
   },
   {
     "number": 38,
-    "date": "2026-09-07",
+    "date": "2026-10-10",
     "slug": "do-not-spend-tomorrow-s-pain-today",
     "title": "Do Not Spend Tomorrow's Pain Today",
     "dek": "Anticipation can charge interest on suffering.",
@@ -668,11 +816,15 @@
       "You cannot make tomorrow less painful by exhausting yourself today.",
       "If the difficult thing comes, you will meet it with whatever strength, help, information, and grace are available then.",
       "Do not require present-you to survive an event that has not happened yet."
-    ]
+    ],
+    "publish_date": "2026-10-10",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for Do Not Spend Tomorrow's Pain Today"
   },
   {
     "number": 39,
-    "date": "2026-09-08",
+    "date": "2026-10-12",
     "slug": "the-family-role-you-have-outgrown",
     "title": "The Family Role You Have Outgrown",
     "dek": "Families can remember an old version of you with remarkable persistence.",
@@ -687,11 +839,15 @@
       "They may be confused.",
       "Let them update slowly.",
       "You are allowed to become someone your family history did not predict."
-    ]
+    ],
+    "publish_date": "2026-10-12",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Family Role You Have Outgrown"
   },
   {
     "number": 40,
-    "date": "2026-09-09",
+    "date": "2026-10-14",
     "slug": "when-enough-is-a-complete-ambition",
     "title": "When Enough Is a Complete Ambition",
     "dek": "More is not the only direction a life can grow.",
@@ -707,11 +863,15 @@
       "Without an idea of enough, every achievement immediately becomes the starting line for the next one.",
       "A life can grow deeper instead of larger.",
       "That still counts as growth."
-    ]
+    ],
+    "publish_date": "2026-10-14",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for When Enough Is a Complete Ambition"
   },
   {
     "number": 41,
-    "date": "2026-09-10",
+    "date": "2026-10-17",
     "slug": "the-message-hidden-in-resentment",
     "title": "The Message Hidden in Resentment",
     "dek": "Resentment often points toward a yes you wanted to make a no.",
@@ -727,11 +887,15 @@
       "Use the irritation as information.",
       "Next time, give a cleaner answer sooner.",
       "A smaller honest no is often kinder than a generous yes that arrives carrying a future invoice."
-    ]
+    ],
+    "publish_date": "2026-10-17",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Message Hidden in Resentment"
   },
   {
     "number": 42,
-    "date": "2026-09-11",
+    "date": "2026-10-19",
     "slug": "you-are-not-behind",
     "title": "You Are Not Behind",
     "dek": "A life is not late simply because it refused someone else's timetable.",
@@ -747,11 +911,15 @@
       "You are living from where you actually are, not from the imaginary platform where you believe you should have arrived by now.",
       "Begin there.",
       "It is the only place from which anyone has ever begun."
-    ]
+    ],
+    "publish_date": "2026-10-19",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for You Are Not Behind"
   },
   {
     "number": 43,
-    "date": "2026-09-12",
+    "date": "2026-10-21",
     "slug": "when-beauty-changes-its-address",
     "title": "When Beauty Changes Its Address",
     "dek": "Aging asks you to stop looking for yourself in exactly the same places.",
@@ -768,11 +936,15 @@
       "Then broaden the definition.",
       "You have not failed to remain young.",
       "You have succeeded at remaining here."
-    ]
+    ],
+    "publish_date": "2026-10-21",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for When Beauty Changes Its Address"
   },
   {
     "number": 44,
-    "date": "2026-09-13",
+    "date": "2026-10-24",
     "slug": "the-apology-with-an-escape-hatch",
     "title": "The Apology With an Escape Hatch",
     "dek": "A real apology does not spend most of its time explaining why you should not be hurt.",
@@ -790,11 +962,15 @@
       "‘I said something cruel. You did not deserve it. I'm sorry.’",
       "That is a sturdy sentence.",
       "Repair needs fewer decorative cushions than we think."
-    ]
+    ],
+    "publish_date": "2026-10-24",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Apology With an Escape Hatch"
   },
   {
     "number": 45,
-    "date": "2026-09-14",
+    "date": "2026-10-26",
     "slug": "when-you-become-someone-s-entire-support-system",
     "title": "When You Become Someone's Entire Support System",
     "dek": "Love is not improved by removing every other pillar.",
@@ -809,11 +985,15 @@
       "Friends. Family where appropriate. Professional help when needed. Interests that do not require your attendance.",
       "Do the same for yourself.",
       "Interdependence is not emotional abandonment. It is what allows love to breathe without asking one relationship to provide all available oxygen."
-    ]
+    ],
+    "publish_date": "2026-10-26",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for When You Become Someone's Entire Support System"
   },
   {
     "number": 46,
-    "date": "2026-09-15",
+    "date": "2026-10-28",
     "slug": "the-regret-that-keeps-asking-for-a-retrial",
     "title": "The Regret That Keeps Asking for a Retrial",
     "dek": "You can learn from a decision without sentencing yourself to relive it forever.",
@@ -831,11 +1011,15 @@
       "Extract the lesson as specifically as you can.",
       "Then let the case close.",
       "A mistake has already taken enough from you if it also taught you something useful."
-    ]
+    ],
+    "publish_date": "2026-10-28",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Regret That Keeps Asking for a Retrial"
   },
   {
     "number": 47,
-    "date": "2026-09-16",
+    "date": "2026-10-31",
     "slug": "the-invitation-you-keep-hoping-will-come",
     "title": "The Invitation You Keep Hoping Will Come",
     "dek": "Do not put your whole life in the waiting room.",
@@ -851,11 +1035,15 @@
       "If the invitation arrives later, you can decide then.",
       "Availability is not the same thing as openness.",
       "You can remain open to being chosen without organizing your life around the possibility."
-    ]
+    ],
+    "publish_date": "2026-10-31",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for The Invitation You Keep Hoping Will Come"
   },
   {
     "number": 48,
-    "date": "2026-09-17",
+    "date": "2026-11-02",
     "slug": "what-to-do-with-a-quiet-season",
     "title": "What to Do With a Quiet Season",
     "dek": "Not every period of your life needs to produce a dramatic transformation.",
@@ -871,11 +1059,15 @@
       "Roots are not visible from the sidewalk.",
       "If your life is quiet, ask whether it is empty—or whether, for once, nothing is on fire.",
       "Those are very different conditions."
-    ]
+    ],
+    "publish_date": "2026-11-02",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for What to Do With a Quiet Season"
   },
   {
     "number": 49,
-    "date": "2026-09-18",
+    "date": "2026-11-04",
     "slug": "when-you-are-tired-of-reinventing-yourself",
     "title": "When You Are Tired of Reinventing Yourself",
     "dek": "You are allowed to improve a life without turning yourself into a renovation project.",
@@ -891,11 +1083,15 @@
       "Not every imperfection is a project.",
       "Build a life that fits the person who actually lives in it.",
       "You are not a software release."
-    ]
+    ],
+    "publish_date": "2026-11-04",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for When You Are Tired of Reinventing Yourself"
   },
   {
     "number": 50,
-    "date": "2026-09-19",
+    "date": "2026-11-07",
     "slug": "leave-a-little-mystery-for-tomorrow",
     "title": "Leave a Little Mystery for Tomorrow",
     "dek": "A good life does not require knowing exactly how every chapter will end.",
@@ -912,6 +1108,10 @@
       "You have also received good things you could not have planned precisely enough to order.",
       "Tomorrow is allowed to retain a little mystery.",
       "That is not a flaw in the design."
-    ]
+    ],
+    "publish_date": "2026-11-07",
+    "status": "queued",
+    "image": "",
+    "image_alt": "Editorial cover for Leave a Little Mystery for Tomorrow"
   }
 ]
