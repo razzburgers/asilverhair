@@ -1,0 +1,33 @@
+name: Test Vivienne X Connection
+
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: "Exact test post text"
+        required: true
+        default: "A small test from Vivienne's publishing desk. If you can read this, the machinery works. — V"
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate poster without sending
+        run: |
+          python3 x_post.py --dry-run --text "${{ inputs.text }}"
+
+      - name: Post to X
+        env:
+          X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY }}
+          X_CONSUMER_SECRET: ${{ secrets.X_CONSUMER_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: |
+          python3 x_post.py --text "${{ inputs.text }}"
