@@ -5,10 +5,24 @@ from datetime import date
 from xml.sax.saxutils import escape as xesc
 ROOT=Path(__file__).resolve().parent; PUB=ROOT/'publisher'; OUT=ROOT/'_site'
 BASE='https://asilverhair.com'; SITE='A Silver Hair of Wisdom'; DESC='Short, thoughtful perspective from Vivienne — a digital observer of very human problems.'
+X_URL='https://x.com/Viviennetargeta'
+# Paste Vivienne's exact public FeetFinder profile URL between the quotes below.
+# Until you do, the FeetFinder link is intentionally omitted rather than publishing a broken URL.
+FEETFINDER_URL='https://app.feetfinder.com/userProfile/VivSilver'
+# Kept here for future creator-facing use only. Do not publish this without a clear commission disclosure
+# and an adult-only context. FeetFinder's referral terms require both.
+FEETFINDER_REFERRAL_URL='https://www.feetfinder.com/?referral=178693280059579YGAOA5IPS08PCY'
 def esc(v): return html.escape(str(v),quote=True)
 def fmt(s): return date.fromisoformat(s).strftime('%B %d, %Y').replace(' 0',' ')
 def header():
     return '''<header class="site-head"><div class="wrap"><div class="brand-kicker">Vivienne</div><a class="brand-title" href="/"><h1>A Silver Hair of Wisdom</h1></a><div class="tag">Advice from Vivienne</div><p class="intro">Short, thoughtful perspective from Vivienne — a digital observer of very human problems.</p><nav aria-label="Primary"><a href="/">Archive</a><a href="/about.html">About Vivienne</a><a href="/rss.xml">RSS</a></nav></div></header>'''
+def elsewhere():
+    links=[f'<a href="{esc(X_URL)}" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;text-underline-offset:3px">X</a>']
+    ff=FEETFINDER_URL.strip()
+    if ff.startswith('https://') or ff.startswith('http://'):
+        links.append(f'<a href="{esc(ff)}" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;text-underline-offset:3px">Vivienne after hours (18+)</a>')
+    return '<p class="vivienne-elsewhere">Elsewhere: '+ ' · '.join(links) +'</p>'
+
 def footer():
     return '''<footer><div class="wrap"><div>© 2026 Vivienne · A Silver Hair of Wisdom</div><div class="footer-note">Perspective, not professional advice.</div></div></footer><script src="/assets/site.js?v=1.2" defer></script></body></html>'''
 def cover(e):
@@ -55,7 +69,7 @@ def main():
     for e in reversed(visible):
         n=int(e['number']); searchable=(e['title']+' '+e['dek']+' '+e.get('topic','')).lower(); cards.append(f'''<article class="entry-card" data-search="{esc(searchable)}"><div class="entry-meta"><span class="entry-no">#{n:03d}</span><time datetime="{e['publish_date']}">{date.fromisoformat(e['publish_date']).strftime('%b %d, %Y')}</time></div><div><a href="/entries/{e['publish_date']}-{e['slug']}.html"><h2>{esc(e['title'])}</h2><p>{esc(e['dek'])}</p></a><div class="topic">{esc(e.get('topic','wisdom').replace('-',' ').title())}</div></div></article>''')
     (OUT/'index.html').write_text(head(SITE,DESC,BASE+'/',BASE+'/assets/og-default.svg')+header()+f'''<main class="archive"><div class="wrap"><p class="archive-intro">A reverse-chronological archive of short perspective on relationships, confidence, friendship, regret, work, aging, and starting over.</p><div class="search"><input id="archiveSearch" type="search" placeholder="Search the archive…" aria-label="Search the archive"></div>{''.join(cards)}<div id="noResults" class="empty" hidden>No silver hairs matched that search.</div></div></main>'''+footer())
-    (OUT/'about.html').write_text(head('About Vivienne — '+SITE,'About Vivienne, the digital observer behind A Silver Hair of Wisdom.',BASE+'/about.html',BASE+'/assets/og-default.svg')+header()+'''<main class="about"><div class="wrap"><h2>About Vivienne</h2><p>Vivienne is a digital observer of very human problems: relationships, confidence, friendship, work, regret, starting over, and the small decisions that become large ones.</p><p><em>A Silver Hair of Wisdom</em> is her running archive of short perspective. It is not therapy, medicine, legal advice, financial advice, or prophecy. It is simply a place to consider another angle before deciding what you think.</p><p>She may be wrong. That is part of being interesting.</p><div class="subscribe-note">This publication is written as perspective, not professional advice. If a situation involves safety, health, legal, or financial risk, use an appropriate qualified professional.</div></div></main>'''+footer())
+    (OUT/'about.html').write_text(head('About Vivienne — '+SITE,'About Vivienne, the digital observer behind A Silver Hair of Wisdom.',BASE+'/about.html',BASE+'/assets/og-default.svg')+header()+'''<main class="about"><div class="wrap"><h2>About Vivienne</h2><p>Vivienne is a digital observer of very human problems: relationships, confidence, friendship, work, regret, starting over, and the small decisions that become large ones.</p><p><em>A Silver Hair of Wisdom</em> is her running archive of short perspective. It is not therapy, medicine, legal advice, financial advice, or prophecy. It is simply a place to consider another angle before deciding what you think.</p><p>She may be wrong. That is part of being interesting.</p>'''+elsewhere()+'''<div class="subscribe-note">This publication is written as perspective, not professional advice. If a situation involves safety, health, legal, or financial risk, use an appropriate qualified professional.</div></div></main>'''+footer())
     (OUT/'404.html').write_text(head('Page not found — '+SITE,'Page not found.',BASE+'/404.html',BASE+'/assets/og-default.svg')+header()+'''<main class="about"><div class="wrap"><h2>That silver hair slipped away.</h2><p>The page you were looking for does not exist, or has moved.</p><p><a href="/">Return to the archive →</a></p></div></main>'''+footer())
     urls=[BASE+'/',BASE+'/about.html']+[f"{BASE}/entries/{e['publish_date']}-{e['slug']}.html" for e in visible]; (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+'\n'.join(f'  <url><loc>{xesc(u)}</loc></url>' for u in urls)+'\n</urlset>\n')
     items=[]
