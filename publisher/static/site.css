@@ -22,3 +22,22 @@
 
 /* v1.2 publishing engine */
 .post-cover{margin:1.8rem 0 2.2rem}.post-cover img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);background:#111318}.topic{margin-top:.55rem;color:var(--muted);font:700 9px/1.2 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase}.related{margin-top:3rem;padding-top:1.4rem;border-top:1px solid var(--line)}.related ul{margin:.8rem 0 0;padding-left:1.15rem}.related li{margin:.45rem 0}.related a{text-decoration:none}.related a:hover{text-decoration:underline}
+
+/* v1.5 topic hubs */
+.topic-strip{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.topic-strip-label{font:700 10px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.topic-chip{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:7px 10px;background:rgba(255,255,255,.018);font:700 10px system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.topic-chip span{color:var(--muted);font-weight:600}.topic-chip:hover{border-color:#414653;color:var(--text)}
+.topic-chip-all{color:var(--silver)}
+.topics-index h1,.topic-hub h1{margin-top:14px}
+.topic-hub-intro{max-width:720px;color:var(--soft);font-size:19px;margin:14px 0 8px}
+.topic-count{color:var(--muted);font:12px/1.5 system-ui,sans-serif;margin:0 0 18px}
+.topic-back{margin:0 0 14px;font:700 11px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px}
+.topic-card{display:block;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:18px;transition:transform .14s ease,border-color .14s ease}
+.topic-card:hover{transform:translateY(-1px);border-color:#414653}
+.topic-card-name{display:block;font-size:25px;line-height:1.1;letter-spacing:-.025em}
+.topic-card-count{display:block;margin-top:7px;color:var(--silver);font:700 10px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.topic-card-desc{display:block;margin-top:10px;color:var(--muted);font:13px/1.6 system-ui,sans-serif}
+.entry-page .series-mark a:hover,.related .meta a:hover,.topic:hover{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:620px){.topic-grid{grid-template-columns:1fr}.topic-hub-intro{font-size:17px}}
