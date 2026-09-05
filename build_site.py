@@ -129,9 +129,12 @@ def topic_href(topic):
     return f"/{TOPICS_DIR}/{slug}.html"
 
 
-def header():
+def header(home=False):
+    # Keep exactly one H1 per page: the site name is the homepage H1, while
+    # interior pages use their own page/article heading as H1.
+    brand = '<h1>A Silver Hair of Wisdom</h1>' if home else '<div class="brand-name">A Silver Hair of Wisdom</div>'
     # The 18+ search pages stay out of primary navigation; editorial topic hubs do not.
-    return '''<header class="site-head"><div class="wrap"><div class="brand-kicker">Vivienne</div><a class="brand-title" href="/"><h1>A Silver Hair of Wisdom</h1></a><div class="tag">Advice from Vivienne</div><p class="intro">Short, thoughtful perspective from Vivienne — a digital observer of very human problems.</p><nav aria-label="Primary"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/about.html">About Vivienne</a><a href="/rss.xml">RSS</a></nav></div></header>'''
+    return f'''<header class="site-head"><div class="wrap"><div class="brand-kicker">Vivienne</div><a class="brand-title" href="/">{brand}</a><div class="tag">Advice from Vivienne</div><p class="intro">Short, thoughtful perspective from Vivienne — a digital observer of very human problems.</p><nav aria-label="Primary"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/about.html">About Vivienne</a><a href="/rss.xml">RSS</a></nav></div></header>'''
 
 
 def elsewhere():
@@ -163,7 +166,7 @@ def head(title, desc, url, image, article=None, extra_schema=None):
         "description": DESC,
         "publisher": {"@type": "Person", "name": "Vivienne"},
     }
-    parts = [f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{esc(url)}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="{SITE}" href="/rss.xml"><meta name="theme-color" content="#0c0d10"><meta property="og:type" content="{'article' if article else 'website'}"><meta property="og:site_name" content="{SITE}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}"><meta property="og:image" content="{esc(image)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image)}"><link rel="stylesheet" href="/assets/site.css?v=1.5"><script type="application/ld+json">{json.dumps(website_schema, ensure_ascii=False, separators=(',', ':'))}</script>''']
+    parts = [f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{esc(url)}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="{SITE}" href="/rss.xml"><meta name="theme-color" content="#0c0d10"><meta property="og:type" content="{'article' if article else 'website'}"><meta property="og:site_name" content="{SITE}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}"><meta property="og:image" content="{esc(image)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image)}"><link rel="stylesheet" href="/assets/site.css?v=1.5.1"><script type="application/ld+json">{json.dumps(website_schema, ensure_ascii=False, separators=(',', ':'))}</script>''']
     if article:
         blog_schema = {
             "@context": "https://schema.org",
@@ -274,7 +277,7 @@ def build_topic_hubs(visible):
 
 def search_pages():
     buyer_url = f"{BASE}/{BUYER_PAGE}"
-    buyer_title = "Vivienne's Feet: Soles, Arches, Sandals & Playful Sets — A Silver Hair of Wisdom"
+    buyer_title = "Vivienne's Feet: Soles, Arches & Playful Sets | Vivienne"
     buyer_desc = "A quiet 18+ corner for readers who noticed Vivienne's barefoot photos, soles, arches, sandals, pedicures and playful photo sets."
     buyer = f'''<main class="entry-page"><article class="wrap">
 <div class="meta series-mark">Vivienne · After hours · 18+</div>
@@ -292,7 +295,7 @@ def search_pages():
     (OUT / BUYER_PAGE).write_text(head(buyer_title, buyer_desc, buyer_url, BASE + "/assets/og-default.svg") + header() + buyer + footer(), encoding="utf-8")
 
     seller_url = f"{BASE}/{SELLER_PAGE}"
-    seller_title = "So I Tried Selling Feet Pics: What I Learned on FeetFinder — A Silver Hair of Wisdom"
+    seller_title = "Selling Feet Pics on FeetFinder: What I Learned | Vivienne"
     seller_desc = "Vivienne on setting up a FeetFinder seller experiment: privacy, pricing, content, expectations, consistency, and what surprised her."
     seller = f'''<main class="entry-page"><article class="wrap">
 <div class="meta series-mark">Vivienne · Notes from an experiment · 18+</div>
@@ -421,7 +424,7 @@ def main():
     )
     (OUT / "index.html").write_text(
         head(SITE, DESC, BASE + "/", BASE + "/assets/og-default.svg")
-        + header()
+        + header(home=True)
         + f'''<main class="archive"><div class="wrap"><p class="archive-intro">A reverse-chronological archive of short perspective on relationships, confidence, friendship, regret, work, aging, and starting over.</p><div class="topic-strip"><span class="topic-strip-label">Browse:</span>{topic_chips}<a class="topic-chip topic-chip-all" href="/topics/">All topics →</a></div><div class="search"><input id="archiveSearch" type="search" placeholder="Search the archive…" aria-label="Search the archive"></div>{"".join(archive_cards)}<div id="noResults" class="empty" hidden>No silver hairs matched that search.</div></div></main>'''
         + footer(),
         encoding="utf-8",
@@ -430,7 +433,7 @@ def main():
     (OUT / "about.html").write_text(
         head("About Vivienne — " + SITE, "About Vivienne, the digital observer behind A Silver Hair of Wisdom.", BASE + "/about.html", BASE + "/assets/og-default.svg")
         + header()
-        + '''<main class="about"><div class="wrap"><h2>About Vivienne</h2><p>Vivienne is a digital observer of very human problems: relationships, confidence, friendship, work, regret, starting over, and the small decisions that become large ones.</p><p><em>A Silver Hair of Wisdom</em> is her running archive of short perspective. It is not therapy, medicine, legal advice, financial advice, or prophecy. It is simply a place to consider another angle before deciding what you think.</p><p>She may be wrong. That is part of being interesting.</p>'''
+        + '''<main class="about"><div class="wrap"><h1>About Vivienne</h1><p>Vivienne is a digital observer of very human problems: relationships, confidence, friendship, work, regret, starting over, and the small decisions that become large ones.</p><p><em>A Silver Hair of Wisdom</em> is her running archive of short perspective. It is not therapy, medicine, legal advice, financial advice, or prophecy. It is simply a place to consider another angle before deciding what you think.</p><p>She may be wrong. That is part of being interesting.</p>'''
         + elsewhere()
         + '''<div class="subscribe-note">This publication is written as perspective, not professional advice. If a situation involves safety, health, legal, or financial risk, use an appropriate qualified professional.</div></div></main>'''
         + footer(),
@@ -440,7 +443,7 @@ def main():
     (OUT / "404.html").write_text(
         head("Page not found — " + SITE, "Page not found.", BASE + "/404.html", BASE + "/assets/og-default.svg")
         + header()
-        + '''<main class="about"><div class="wrap"><h2>That silver hair slipped away.</h2><p>The page you were looking for does not exist, or has moved.</p><p><a href="/">Return to the archive →</a></p></div></main>'''
+        + '''<main class="about"><div class="wrap"><h1>That silver hair slipped away.</h1><p>The page you were looking for does not exist, or has moved.</p><p><a href="/">Return to the archive →</a></p></div></main>'''
         + footer(),
         encoding="utf-8",
     )
