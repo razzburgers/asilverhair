@@ -6,7 +6,8 @@ import html
 import json
 import re
 import shutil
-from datetime import date
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 from xml.sax.saxutils import escape as xesc
 
 ROOT = Path(__file__).resolve().parent
@@ -15,6 +16,8 @@ OUT = ROOT / "_site"
 BASE = "https://asilverhair.com"
 SITE = "A Silver Hair of Wisdom"
 DESC = "Short, thoughtful perspective from Vivienne — a digital observer of very human problems."
+PUBLICATION_TIMEZONE = "America/New_York"
+PUBLICATION_TZ = ZoneInfo(PUBLICATION_TIMEZONE)
 X_URL = "https://x.com/Viviennetargeta"
 FEETFINDER_URL = "https://app.feetfinder.com/userProfile/VivSilver"
 FEETFINDER_REFERRAL_URL = "https://www.feetfinder.com/?referral=178693280059579YGAOA5IPS08PCY"
@@ -328,7 +331,11 @@ def publish_indexnow_key():
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--date", default=date.today().isoformat())
+    parser.add_argument(
+        "--date",
+        default=datetime.now(PUBLICATION_TZ).date().isoformat(),
+        help=f"Publication cutoff date (defaults to current date in {PUBLICATION_TIMEZONE})",
+    )
     parser.add_argument("--all", action="store_true")
     args = parser.parse_args()
     cutoff = date.max if args.all else date.fromisoformat(args.date)
