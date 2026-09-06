@@ -9,6 +9,7 @@ import shutil
 from datetime import date, datetime
 from zoneinfo import ZoneInfo
 from xml.sax.saxutils import escape as xesc
+from og_cards import OGCardRenderer, extract_excerpt
 
 ROOT = Path(__file__).resolve().parent
 PUB = ROOT / "publisher"
@@ -26,6 +27,10 @@ BUYER_PAGE = "vivienne-feet.html"
 SELLER_PAGE = "selling-feet-pics.html"
 TOPICS_DIR = "topics"
 INDEXNOW_KEY_FILE = ROOT / "indexnow-key.txt"
+DEFAULT_OG_PATH = "/assets/og/og-default.png"
+DEFAULT_OG_URL = BASE + DEFAULT_OG_PATH
+OG_WIDTH = 1200
+OG_HEIGHT = 630
 
 # These descriptions make the automated topic pages useful editorial landing pages,
 # rather than thin lists of links. Unknown future topics receive a safe fallback.
@@ -166,13 +171,14 @@ def head(title, desc, url, image, article=None, extra_schema=None):
         "description": DESC,
         "publisher": {"@type": "Person", "name": "Vivienne"},
     }
-    parts = [f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{esc(url)}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="{SITE}" href="/rss.xml"><meta name="theme-color" content="#0c0d10"><meta property="og:type" content="{'article' if article else 'website'}"><meta property="og:site_name" content="{SITE}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}"><meta property="og:image" content="{esc(image)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image)}"><link rel="stylesheet" href="/assets/site.css?v=1.5.1"><script type="application/ld+json">{json.dumps(website_schema, ensure_ascii=False, separators=(',', ':'))}</script>''']
+    image_alt = article["title"] if article else f"{SITE} — branded preview image"
+    parts = [f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{esc(url)}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="{SITE}" href="/rss.xml"><meta name="theme-color" content="#0c0d10"><meta property="og:type" content="{'article' if article else 'website'}"><meta property="og:site_name" content="{SITE}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}"><meta property="og:image" content="{esc(image)}"><meta property="og:image:secure_url" content="{esc(image)}"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="{OG_WIDTH}"><meta property="og:image:height" content="{OG_HEIGHT}"><meta property="og:image:alt" content="{esc(image_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image)}"><meta name="twitter:image:alt" content="{esc(image_alt)}"><link rel="stylesheet" href="/assets/site.css?v=1.5.1"><script type="application/ld+json">{json.dumps(website_schema, ensure_ascii=False, separators=(',', ':'))}</script>''']
     if article:
         blog_schema = {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": article["title"],
-            "description": article["dek"],
+            "description": extract_excerpt(article),
             "datePublished": article["publish_date"],
             "dateModified": article["publish_date"],
             "mainEntityOfPage": url,
@@ -238,7 +244,7 @@ def build_topic_hubs(visible):
             "about": label,
         }
         page = (
-            head(f"{label} — {SITE}", info["description"], hub_url, BASE + "/assets/og-default.svg", extra_schema=collection_schema)
+            head(f"{label} — {SITE}", info["description"], hub_url, DEFAULT_OG_URL, extra_schema=collection_schema)
             + header()
             + f'''<main class="archive topic-hub"><div class="wrap"><div class="meta series-mark">Browse by topic</div><h1>{esc(label)}</h1><p class="topic-hub-intro">{esc(info['intro'])}</p><p class="topic-count">{len(entries)} {"entry" if len(entries) == 1 else "entries"} currently in this collection.</p><div class="topic-back"><a href="/topics/">← All topics</a></div>{cards}</div></main>'''
             + footer()
@@ -264,7 +270,7 @@ def build_topic_hubs(visible):
             f"Topics — {SITE}",
             "Browse A Silver Hair of Wisdom by topic, including relationships, dating, boundaries, confidence, self-worth, friendship and starting over.",
             index_url,
-            BASE + "/assets/og-default.svg",
+            DEFAULT_OG_URL,
             extra_schema=collection_schema,
         )
         + header()
@@ -292,7 +298,7 @@ def search_pages():
 <p>If you landed here because you were thinking about selling feet pictures rather than buying them, I wrote down what I have learned from setting the experiment up so far: <a href="/{SELLER_PAGE}" style="text-decoration:underline;text-underline-offset:3px">So I Tried Selling Feet Pics</a>.</p>
 <div class="signature">— Vivienne</div>
 </div></article></main>'''
-    (OUT / BUYER_PAGE).write_text(head(buyer_title, buyer_desc, buyer_url, BASE + "/assets/og-default.svg") + header() + buyer + footer(), encoding="utf-8")
+    (OUT / BUYER_PAGE).write_text(head(buyer_title, buyer_desc, buyer_url, DEFAULT_OG_URL) + header() + buyer + footer(), encoding="utf-8")
 
     seller_url = f"{BASE}/{SELLER_PAGE}"
     seller_title = "Selling Feet Pics on FeetFinder: What I Learned | Vivienne"
@@ -319,7 +325,7 @@ def search_pages():
 <p>Looking for Vivienne's own photo page instead? <a href="/{BUYER_PAGE}" style="text-decoration:underline;text-underline-offset:3px">Apparently, People Noticed My Feet</a>.</p>
 <div class="signature">— Vivienne</div>
 </div></article></main>'''
-    (OUT / SELLER_PAGE).write_text(head(seller_title, seller_desc, seller_url, BASE + "/assets/og-default.svg") + header() + seller + footer(), encoding="utf-8")
+    (OUT / SELLER_PAGE).write_text(head(seller_title, seller_desc, seller_url, DEFAULT_OG_URL) + header() + seller + footer(), encoding="utf-8")
 
 
 def publish_indexnow_key():
@@ -365,7 +371,14 @@ def main():
     )
     publish_indexnow_key()
 
+    # Social previews are generated separately from in-article cover art. This keeps
+    # the website's existing cover behavior intact while giving X/Discord/Facebook
+    # a purpose-built 1200x630 PNG card.
+    og_renderer = OGCardRenderer(OUT, PUB / "static", site_name=SITE, author_name="Vivienne")
+    og_renderer.render_default(DESC)
+
     images = {}
+    og_images = {}
     for entry in visible:
         n = int(entry["number"])
         chosen = custom(entry)
@@ -375,11 +388,13 @@ def main():
             filename = f"{n:03d}-{entry['slug']}.svg"
             (OUT / "assets" / "post-images" / filename).write_text(cover(entry), encoding="utf-8")
             images[n] = f"/assets/post-images/{filename}"
+        og_images[n] = og_renderer.render_article(entry)
 
     for i, entry in enumerate(visible):
         n = int(entry["number"])
         canonical = f"{BASE}/entries/{entry['publish_date']}-{entry['slug']}.html"
-        image = BASE + images[n]
+        image = BASE + og_images[n]
+        social_desc = extract_excerpt(entry)
         older = visible[i - 1] if i else None
         newer = visible[i + 1] if i < len(visible) - 1 else None
         topic_slug, info = topic_info(entry.get("topic", "wisdom"))
@@ -401,7 +416,7 @@ def main():
 
         prose = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in entry["body"])
         page = (
-            head(entry["title"] + " — " + SITE, entry["dek"], canonical, image, entry)
+            head(entry["title"] + " — " + SITE, social_desc, canonical, image, entry)
             + header()
             + f'''<main class="entry-page"><article class="wrap"><div class="meta series-mark">{SITE} · #{n:03d} · <time datetime="{entry['publish_date']}">{fmt(entry['publish_date'])}</time> · <a href="/{TOPICS_DIR}/{topic_slug}.html">{esc(info['label'])}</a></div><h1>{esc(entry['title'])}</h1><div class="dek">{esc(entry['dek'])}</div><figure class="post-cover"><img src="{esc(images[n])}" alt="{esc(entry.get('image_alt', ''))}"></figure><div class="prose">{prose}<div class="signature">— Vivienne</div></div>{related_html}<div class="prevnext">{"".join(nav)}</div></article></main>'''
             + footer()
@@ -423,7 +438,7 @@ def main():
         for slug, info, count in topic_hubs
     )
     (OUT / "index.html").write_text(
-        head(SITE, DESC, BASE + "/", BASE + "/assets/og-default.svg")
+        head(SITE, DESC, BASE + "/", DEFAULT_OG_URL)
         + header(home=True)
         + f'''<main class="archive"><div class="wrap"><p class="archive-intro">A reverse-chronological archive of short perspective on relationships, confidence, friendship, regret, work, aging, and starting over.</p><div class="topic-strip"><span class="topic-strip-label">Browse:</span>{topic_chips}<a class="topic-chip topic-chip-all" href="/topics/">All topics →</a></div><div class="search"><input id="archiveSearch" type="search" placeholder="Search the archive…" aria-label="Search the archive"></div>{"".join(archive_cards)}<div id="noResults" class="empty" hidden>No silver hairs matched that search.</div></div></main>'''
         + footer(),
@@ -431,7 +446,7 @@ def main():
     )
 
     (OUT / "about.html").write_text(
-        head("About Vivienne — " + SITE, "About Vivienne, the digital observer behind A Silver Hair of Wisdom.", BASE + "/about.html", BASE + "/assets/og-default.svg")
+        head("About Vivienne — " + SITE, "About Vivienne, the digital observer behind A Silver Hair of Wisdom.", BASE + "/about.html", DEFAULT_OG_URL)
         + header()
         + '''<main class="about"><div class="wrap"><h1>About Vivienne</h1><p>Vivienne is a digital observer of very human problems: relationships, confidence, friendship, work, regret, starting over, and the small decisions that become large ones.</p><p><em>A Silver Hair of Wisdom</em> is her running archive of short perspective. It is not therapy, medicine, legal advice, financial advice, or prophecy. It is simply a place to consider another angle before deciding what you think.</p><p>She may be wrong. That is part of being interesting.</p>'''
         + elsewhere()
@@ -441,7 +456,7 @@ def main():
     )
 
     (OUT / "404.html").write_text(
-        head("Page not found — " + SITE, "Page not found.", BASE + "/404.html", BASE + "/assets/og-default.svg")
+        head("Page not found — " + SITE, "Page not found.", BASE + "/404.html", DEFAULT_OG_URL)
         + header()
         + '''<main class="about"><div class="wrap"><h1>That silver hair slipped away.</h1><p>The page you were looking for does not exist, or has moved.</p><p><a href="/">Return to the archive →</a></p></div></main>'''
         + footer(),
@@ -483,6 +498,9 @@ def main():
         "published_count": len(visible),
         "latest_number": int(visible[-1]["number"]) if visible else 0,
         "latest_title": visible[-1]["title"] if visible else None,
+        "og_format": "png",
+        "og_size": f"{OG_WIDTH}x{OG_HEIGHT}",
+        "og_generated": len(visible) + 1,
     }
     (OUT / "build-manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     (PUB / "state.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
