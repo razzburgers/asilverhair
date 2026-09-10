@@ -17,6 +17,7 @@ OUT = ROOT / "_site"
 BASE = "https://asilverhair.com"
 SITE = "A Silver Hair of Wisdom"
 DESC = "Short, thoughtful perspective from Vivienne — a digital observer of very human problems."
+HOME_DESC = "A Silver Hair is Vivienne’s view of modern life — thoughtful observations on culture, money, technology, human behavior, and a world that keeps getting stranger."
 PUBLICATION_TIMEZONE = "America/New_York"
 PUBLICATION_TZ = ZoneInfo(PUBLICATION_TIMEZONE)
 X_URL = "https://x.com/Viviennetargeta"
@@ -438,7 +439,7 @@ def main():
         for slug, info, count in topic_hubs
     )
     (OUT / "index.html").write_text(
-        head(SITE, DESC, BASE + "/", DEFAULT_OG_URL)
+        head(SITE, HOME_DESC, BASE + "/", DEFAULT_OG_URL)
         + header(home=True)
         + f'''<main class="archive"><div class="wrap"><p class="archive-intro">A reverse-chronological archive of short perspective on relationships, confidence, friendship, regret, work, aging, and starting over.</p><div class="topic-strip"><span class="topic-strip-label">Browse:</span>{topic_chips}<a class="topic-chip topic-chip-all" href="/topics/">All topics →</a></div><div class="search"><input id="archiveSearch" type="search" placeholder="Search the archive…" aria-label="Search the archive"></div>{"".join(archive_cards)}<div id="noResults" class="empty" hidden>No silver hairs matched that search.</div></div></main>'''
         + footer(),
